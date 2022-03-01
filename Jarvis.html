@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis</title>
+    <style>
+        body {
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+            color: rgb(61, 59, 59);
+            font-weight: 500;
+            font-family: "IBM Plex Mono", "Menlo", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier", "monospace";
+        }
+
+        /*nav bar*/
+        nav {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000347;
+            color: white;
+            height: 54px;
+            width: 100%;
+        }
+
+        #logo {
+            margin-left: 10px;
+            height: 35px;
+        }
+
+        .nav_menu,
+        .nav_menu ul,
+        .nav_menu li,
+        .profiel,
+        .profiel ul,
+        .profiel li {
+            display: inherit;
+            align-items: inherit;
+            max-height: 48px;
+            background-color: #000347;
+            padding: 3px 5px;
+        }
+
+        .nav_menu img {
+            height: 30px;
+            padding-right: 5px;
+            margin-left: 10px;
+        }
+
+        .geselecteerd {
+            background-color: white;
+            color: #57be8e;
+            border-radius: 5%;
+            display: flex;
+            height: 35px;
+            align-items: center;
+            padding-right: 10px;
+        }
+
+        #level {
+            background-color: #87dbe5;
+            padding: 5px 25px;
+            font-size: 10px;
+            border-radius: 5%;
+            max-height: 45px;
+        }
+
+        .profiel img {
+            height: 25px;
+            margin: 0px 1px 0px 3px;
+        }
+
+        .profiel p {
+            margin-left: 0;
+        }
+
+        /*1:1 overzicht*/
+        .main {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin: 15px auto;
+        }
+
+        .overzicht {
+            display: flex;
+            flex-direction: column;
+            flex: 0.5;
+            margin-right: 25px;
+        }
+
+        table {
+            border: 1px solid lightgray;
+            text-align: left;
+            box-shadow: 0.5px 0.5px 0.25px 0.25px;
+        }
+
+        td {
+            justify-content: center;
+            padding: 5px 15px;
+            border-top: 1px solid lightgray;
+        }
+
+        th {
+            padding: 15px 15px;
+            font-size: 12px;
+        }
+
+        p.button {
+            background-color: #57be8e;
+            color: white;
+            border-radius: 5%;
+            padding: 8px 12px;
+            margin: 0;
+        }
+
+        /*Over 1:1's*/
+        .groei_section {
+            border: 1px solid lightgray;
+            box-shadow: 0.5px 0.5px 0.25px 0.25px;
+            flex: 0.25;
+            padding: 15px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .groei_section img {
+            width: 95%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+
+        <img src="logo_white.png" alt="logo" id="logo">
+        <!--menu-->
+        <div class="nav_menu">
+            <ul>
+                <li><img src="home_icon.png" alt="home_icon">
+                    <p>HOME</p>
+                </li>
+                <li><img src="universe_icon.png" alt="universe_icon">
+                    <p>UNIVERSE</p>
+                </li>
+                <li><img src="reviews_icon.png" alt="reviews_icon">
+                    <p>REVIEWS</p>
+                </li>
+                <li>
+                    <div class="geselecteerd">
+                        <img src="feedback_icon.png" alt="feedback_icon">
+                        <p>1:1'S</p>
+                    </div>
+                </li>
+                <li><img src="doelen_icon.png" alt="doelen_icon">
+                    <p>DOELEN</p>
+                </li>
+                <li><img src="leaderbord_icon.png" alt="leaderboard_icon">
+                    <p>LEADERBOARD</p>
+                </li>
+                <li><img src="meer_icon.png" alt="meer_icon">
+                    <p>MEER</p>
+                </li>
+            </ul>
+        </div>
+        <!--profiel-->
+        <div class="profiel">
+            <ul>
+                <li>
+                    <p id="level">Level 14 - 3%</p>
+                </li>
+                <li><img src="credits_icon.png" alt="credits_icon">
+                    <p>3</p>
+                </li>
+                <li><img src="profile.png" alt="profiel" id="profielfoto"><img src="meer_icon.png" alt="meer_icon"></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="overzicht">
+            <h1>1:1's</h1>
+            <table>
+                <tr>
+                    <th>Coach</th>
+                    <th>Gecreëerd</th>
+                    <th>Voltooid</th>
+                    <th>Status</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Bob, de Coach</td>
+                    <td>26 minuten geleden</td>
+                    <td></td>
+                    <td>Bezig</td>
+                    <td>
+                        <p class='button'>Vul in</p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Bob, de Coach</td>
+                    <td>16 uur geleden</td>
+                    <td></td>
+                    <td>Wachten op Coach</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mo, Hulpcoach</td>
+                    <td>06 dagen geleden</td>
+                    <td>42 dagen geleden</td>
+                    <td>Afgerond</td>
+                    <td>
+                        <p class="button">Bekijk</p>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="groei_section">
+            <h1>Over 1:1's</h1>
+            <p>Om jou groei in beeld te krijgen voeren je samen met je coach 1 op 1 gesprekken. Tijdens een 1:1
+                gesprek bespreek je samen met je coach je huidige vaardigheden en kies je nieuwe vaardigheden uit om
+                aan te werken. Zo zorgen we samen dat je groeit.</p>
+            <img src="growth.png" alt="groeiende plant">
+        </div>
+    </div>
+</body>
+
+</html>
